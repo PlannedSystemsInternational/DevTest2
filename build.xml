@@ -58,14 +58,6 @@
         <fileset dir="retrieveUnpackaged\profiles" includes="**/*.profile" />
     </replaceregexp>
 </target>
-<!--***THIS NEEDS TO BE DELETED***
-<target name="delete_FeedItem_layout" depends="remove_profile_references">
-    <delete file="retrieveUnpackaged\layouts\FeedItem-Feed Item Layout.layout"/>
-    <delete file="retrieveUnpackaged\workflows\Question.workflow"/>
-    <delete file="retrieveUnpackaged\workflows\Reply.workflow"/>
-    <delete file="retrieveUnpackaged\workflows\SocialPost.workflow"/>
-    <delete file="retrieveUnpackaged\settings\Name.settings"/>
-</target>-->
     <!-- Deploy a zip of metadata files to the org -->
     <target name="deployZip">
       <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" zipFile="${sf.zipFile}" pollWaitMillis="1000" rollbackOnError="true"/>
